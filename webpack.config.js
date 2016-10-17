@@ -10,5 +10,18 @@ module.exports = {
         // 因为webpack-dev-server伺服的文件是相对publicPath这个路径的。
         // publicPath: '/assets/',
         filename: 'bundle.js'
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js|jsx$/,
+                exclude: "/node_modules/",
+                loader: 'babel',
+                query: {
+                    // presets: ['es2015']
+                    presets: ['es2015', 'react']
+                }
+            }
+        ]
     }
 };
