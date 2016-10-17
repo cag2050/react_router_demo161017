@@ -10,6 +10,6 @@ export default class Left extends React.Component {
     }
 
     render() {
-        return <div>Bottom</div>
+        return <div>Bottom12222</div>
     }
 }
