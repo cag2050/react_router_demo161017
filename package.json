@@ -1,0 +1,27 @@
+{
+  "name": "react_router_demo161017",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors --hot --inline --content-base ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cag2050/react_router_demo161017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cag2050/react_router_demo161017/issues"
+  },
+  "homepage": "https://github.com/cag2050/react_router_demo161017#readme"
+}
