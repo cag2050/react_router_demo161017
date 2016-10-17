@@ -3,13 +3,13 @@
  */
 import React from 'react';
 
-export default class Left extends React.Component {
+export default class Bottom extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
     render() {
-        return <div>Bottom12222</div>
+        return <div>Bottom</div>
     }
 }
