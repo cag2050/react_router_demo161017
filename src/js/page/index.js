@@ -7,6 +7,7 @@ import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 
 import Home from '../component/Home';
 import Books from '../component/Books';
+import Book from '../component/Book';
 import About from '../component/About';
 import Nav from '../component/Nav';
 import Left from '../component/Left';
@@ -36,6 +37,7 @@ ReactDOM.render(<Router history={hashHistory}>
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
         <Route path="/Books" component={Books}/>
+        <Route path="/Books/:pubName/:bookName" component={Book}/>
         <Route path="/About" component={About}/>
     </Route>
 </Router>, document.getElementById("page"));

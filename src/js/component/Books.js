@@ -2,6 +2,7 @@
  * Created by chenanguo on 2016/10/17.
  */
 import React from 'react';
+import {Link} from 'react-router';
 
 export default class Books extends React.Component {
     constructor(props) {
@@ -10,6 +11,12 @@ export default class Books extends React.Component {
     }
 
     render() {
-        return <div>Books list</div>
+        return <div>
+            <ul>
+                <li><Link to="/Books/People/es6_lesson" activeClassName="active">es6_lesson</Link></li>
+                <li><Link to="/Books/People/react_lesson" activeClassName="active">react_lesson</Link></li>
+            </ul>
+            {this.props.children}
+        </div>
     }
 }
