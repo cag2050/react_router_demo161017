@@ -5,28 +5,40 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 
+import Home from '../component/Home';
+import Books from '../component/Books';
+import About from '../component/About';
+import Nav from '../component/Nav';
 import Left from '../component/Left';
 import Right from '../component/Right';
 import Bottom from '../component/Bottom';
-import Nav from '../component/Nav';
-import Books from '../component/Books';
 
-ReactDOM.render(<div className="container">
-    <div className="header" id="nav"></div>
-    <div className="middle">
-        <div className="con_left"><Left /></div>
-        <div className="content">11111</div>
-        <div className="con_right"><Right /></div>
-    </div>
-    <div className="bottom"><Bottom /></div>
-</div>, document.getElementById("page"));
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    render() {
+        return <div className="container">
+            <div className="header"><Nav /></div>
+            <div className="middle">
+                <div className="con_left"><Left /></div>
+                <div className="content">{this.props.children}</div>
+                <div className="con_right"><Right /></div>
+            </div>
+            <div className="bottom"><Bottom /></div>
+        </div>
+    }
+}
 
 ReactDOM.render(<Router history={hashHistory}>
-    <Route path="/" component={Nav}>
-
-        <Route path="/Books" component={Books}>Books</Route>
+    <Route path="/" component={App}>
+        <IndexRoute component={Home}/>
+        <Route path="/Books" component={Books}/>
+        <Route path="/About" component={About}/>
     </Route>
-</Router>, document.getElementById("nav"));
+</Router>, document.getElementById("page"));
 
 
 // console.log("console.log输出的内容");

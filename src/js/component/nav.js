@@ -13,7 +13,9 @@ export default class Nav extends React.Component {
     render() {
         return <div>
             <ul role="nav">
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/Books">Books</Link></li>
+                <li><Link to="/About">About</Link></li>
             </ul>
         </div>
     }
