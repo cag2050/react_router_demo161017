@@ -10,6 +10,6 @@ export default class Book extends React.Component {
     }
 
     render() {
-        return <div>{this.props.params.bookName}</div>
+        return <div>{this.props.params.pubName}出版社-{this.props.params.bookName}</div>
     }
 }
