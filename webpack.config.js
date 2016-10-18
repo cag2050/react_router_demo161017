@@ -32,8 +32,8 @@ var config = {
         // 如果配置了publicPath这个字段的值的话，在index.html文件里面也应该做出调整。
         // 因为webpack-dev-server伺服的文件是相对publicPath这个路径的。
         // publicPath: '/assets/',
-        filename: 'bundle.js'
-        // filename: "[name].js"
+        filename: 'bundle.js'   // 使用webpack-dev-server时，在内存中存在此单一文件
+        // filename: "[name].js"      // 使用webpack命令时，打包成单独的文件，在html页面中引用
         // sourceMapFilename: "[file].map"
     },
     module: {
